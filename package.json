@@ -1,0 +1,21 @@
+{
+  "name": "substance-interview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "hs .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  },
+  "standard": {
+    "globals": ["React", "ReactDOM", "$$"]
+  }
+}
