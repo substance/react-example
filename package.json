@@ -7,15 +7,24 @@
     "lib": "lib"
   },
   "scripts": {
-    "start": "hs .",
+    "start-watch": "npx babel --watch src --out-dir build --presets react-app/prod",
+    "serve": "hs .",
+    "start": "concurrently --kill-others \"npm run start-watch\" \"npm run serve\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "concurrently": "^4.1.0",
     "http-server": "^0.11.1"
   },
   "standard": {
-    "globals": ["React", "ReactDOM", "$$"]
+    "globals": [
+      "React",
+      "ReactDOM",
+      "$$"
+    ]
   }
 }
